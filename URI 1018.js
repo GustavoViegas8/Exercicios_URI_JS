@@ -1,0 +1,25 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
+
+var valor = lines.shift();
+console.log(valor.toString());
+let nota100 = valor/100;
+console.log(parseInt(nota100)+' nota(s) de R$ 100,00');
+let modulo100 = valor%100;
+let nota50 = modulo100/50;
+console.log(parseInt(nota50)+' nota(s) de R$ 50,00');
+let modulo50 = modulo100%50;
+let nota20 = modulo50/20;
+console.log(parseInt(nota20)+' nota(s) de R$ 20,00');
+let modulo20 = modulo50%20;
+let nota10 = modulo20/10;
+console.log(parseInt(nota10)+' nota(s) de R$ 10,00');
+let modulo10 = modulo20%10;
+let nota5 = modulo10/5;
+console.log(parseInt(nota5)+' nota(s) de R$ 5,00');
+let modulo5 = modulo10%5;
+let nota2 = modulo5/2;
+console.log(parseInt(nota2)+' nota(s) de R$ 2,00');
+let modulo2 = modulo5%2;
+let nota1 = modulo2/1;
+console.log(parseInt(nota1)+' nota(s) de R$ 1,00');
